@@ -1,1 +1,1 @@
-Aca se subiria la informacion sobre las estructuras
+En esta carpeta se ubica la información y programación de los sistemas de comunicación.
