@@ -1,0 +1,23 @@
+#include <DHT.h>		// importa la Librerias DHT
+#include <DHT_U.h>
+
+int sensor = 2;			// pin DATA de DHT22 a pin digital 2
+int temperatura;
+int humedad;
+
+DHT dht(sensor, DHT22);		// creacion del objeto, cambiar segundo parametro
+				// utilizar DHT11 o DHT22 dependiendo el caso
+void setup(){
+  Serial.begin(9600);		// inicializacion de monitor serial
+  dht.begin();			// inicializacion de sensor
+}
+
+void loop(){
+  temperatura = dht.readTemperature();	// obtencion de valor de temperatura
+  humedad = dht.readHumidity();		// obtencion de valor de humedad
+  Serial.print("Temperatura: ");	// escritura en monitor serial de los valores
+  Serial.print(temperatura);
+  Serial.print(" Humedad: ");
+  Serial.println(humedad);
+  delay(500);
+}

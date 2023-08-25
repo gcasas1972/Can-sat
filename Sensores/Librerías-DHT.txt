@@ -1,0 +1,1 @@
+Para simplificar el uso del sensor DHT en Arduino, se debe descargar una librería, la cual tiene el mismo nombre del sensor. Esta tiene como "creador" a Adafruit.
